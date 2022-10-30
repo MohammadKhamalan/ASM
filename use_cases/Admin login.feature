@@ -1,4 +1,4 @@
-Feature: search for a client
+Feature: log in for employee
 
   Scenario:  employee logs in succesfully
     Given the correct password is 123 and correct id is 222
