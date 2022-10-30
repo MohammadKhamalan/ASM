@@ -6,33 +6,32 @@ import java.util.logging.Logger;
 public class Admin {
      int id;
      int pass;
-    boolean logged;
-    Logger logger
-            = Logger.getLogger(Admin.class.getName());
+    boolean flag;
+    Logger l= Logger.getLogger(Admin.class.getName());
     public  Admin(){
-        this.setId(123);
+        this.setId(119);
         this.setPass(123);
         this.setLogged(false);
     }
 
 
     public boolean isLogged() {
-        return logged;
+        return flag;
     }
 
     public boolean login(int a , int b) {
         if(a==this.id&&b==this.pass){
-            logged=true;
-            logger.log(Level.INFO,"logged in successfully");
+            flag=true;
+            l.log(Level.INFO,"logged in successfully");
         }
         else
-            logger.log(Level.INFO,"you entered wrong information");
-        return logged;
+            l.log(Level.INFO,"you entered wrong information either id or password");
+        return flag;
     }
+  
 
-
-    public void setLogged(boolean logged) {
-        this.logged = logged;
+    public void setLogged(boolean done) {
+        this.flag = done;
     }
 
 
@@ -51,5 +50,12 @@ public class Admin {
     public void setPass(int pass) {
         this.pass = pass;
     }
+  
+
+	public void logOut() {
+		// TODO Auto-generated method stub
+        flag=false;
+
+	}
 
 }
