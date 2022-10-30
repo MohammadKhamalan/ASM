@@ -38,8 +38,10 @@ public class signup {
 			   cl.setCity(city);	   
 		}
 
-	@When("the user is signed")
-	public void the_user_is_signed() {
+	
+		@When("the user is signed in to his account")
+		public void the_user_is_signed_in_to_his_account() {
+		 
 		 if(!flag){
 			 assertFalse(false);
 	   }
