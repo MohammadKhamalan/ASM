@@ -44,10 +44,8 @@ public class signup {
 		 
 		 if(!flag){
 			 assertFalse(false);
-	   }
-	     else
-	    	 bank.addclient(employee,cl);
-	}
+	   }}
+	     
 	@Then("the client whith ID {string} , NAME {string} , Email {string} , address {string} ,post code {string} ,Entered money={int},city {string} is registered in the system")
 	public void the_client_whith_id_name_email_address_post_code_entered_money_city_is_registered_in_the_system(String id, String name, String email, String address, String ps,Integer en, String city) {
 		bank.addclient(employee,cl);
@@ -59,12 +57,7 @@ public class signup {
 	    if (number.isEmpty()) {
 	        l.log(Level.INFO,"you can add this user");
 	        s = false;
-	    } else {
-	        l.log(Level.INFO,"the employee is not logged in");
-	        for (int i = 0; i < number.size(); i++)
-
-	        s = true;
-	}
+	    } 
 	}
 		@Given("that the admin is not logged in")
 		public void that_the_admin_is_not_logged_in() {

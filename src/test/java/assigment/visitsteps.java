@@ -13,16 +13,18 @@ import io.cucumber.java.en.When;
 public class visitsteps {
 	client cl=new client();
 	visits v=new visits();
+	Admin cll=new Admin();
 	String id;
 	String g;
 	List <client> c=new ArrayList<>();
+
 Scanner sc=new Scanner(System.in);
 List <visits> vi=new ArrayList<>();
 	@Given("the client is logged in to his account")
 	public void the_client_is_logged_in_to_his_account() {
 		for(int i=0;i<c.size();i++) {
 			
-		if(c.get(i).getId().equals(cl.getId())) {
+		//if(c.get(i).getId().equals(cl.getId())) {
 		
 	   if(cl.isLogged()) {
 		   the_client_want_to_visit_bank_to_do_any_services_and_this_time_is_available();
@@ -30,7 +32,7 @@ List <visits> vi=new ArrayList<>();
 	   else {
 		   the_client_is_not_logged_in_to_his_account();
 	   }
-	}}}
+	}}
 
 	@When("the client want to visit bank to do any services and this time is available")
 	public void the_client_want_to_visit_bank_to_do_any_services_and_this_time_is_available() {

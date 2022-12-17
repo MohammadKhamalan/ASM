@@ -35,13 +35,13 @@ public class Admin {
     }
 
 
-    public int getId() {
-        return id;
-    }
-
-    public int getPass() {
-        return pass;
-    }
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public int getPass() {
+//        return pass;
+//    }
 
     public void setId(int id) {
         this.id = id;

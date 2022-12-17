@@ -13,11 +13,9 @@ List <visits> vi=new ArrayList<>();
 visits v=new visits();
 	@Given("the client already made resevartion")
 	public void the_client_already_made_resevartion() {
-	 for(int i=0;i<vi.size();i++) {
-		 if(vi.get(i).getid().equals(cl.getId())) {
+	 
 			 change();
-		 }
-	 }
+		
 	}
 public void change() {
 	 for(int i=0;i<vi.size();i++) {

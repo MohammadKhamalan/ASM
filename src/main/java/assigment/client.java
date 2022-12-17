@@ -53,10 +53,6 @@ public class client {
 	
 	
 
-	public String getEmail() {
-		return email;
-	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -69,18 +65,13 @@ public class client {
 		this.address = address;
 	}
     
-	public String getPostCode() {
-		return postCode;
-	}
+
 
 	public void setPostCode(String postCode) {
 		this.postCode = postCode;
 	}
 
-	public String getCity() {
-		return city;
-	}
-
+	
 	public void setCity(String city) {
 		this.city = city;
 	}
@@ -94,9 +85,6 @@ public class client {
 		this.Enteredmoney = Enteredmoney;
 	}
 
-	public void setSignature(String signature) {
-        this.signature = signature;
-    }
 	
  
 
@@ -110,8 +98,6 @@ public class client {
 	}
 
 	
-	public String getSignature() {
-		return signature; 
-	}
+	
 
 }
