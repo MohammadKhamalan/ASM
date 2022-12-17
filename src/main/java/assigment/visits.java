@@ -26,15 +26,11 @@ public String getnotes() {
 	return notes;
 	
 }
-public void setid(String id1) {
-cl.setId(id1);
-}
+
 public String getid() {
 	return cl.getId();
 }
-public void setdate(String date1) {
-this.date=date1;
-}
+
 public String getdate() {
 	return date;
 }

@@ -1,5 +1,7 @@
 package assigment;
 
+import static org.junit.Assert.assertFalse;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,27 +16,23 @@ boolean want;
  String note;
 	@Then("the client is not visited the bank")
 	public void the_client_is_not_visited_the_bank() {
-		
+		assertFalse(cl.logged);
 	}
 	@When("the client not comming to the bank")
 	public void the_client_not_comming_to_the_bank() {
 		// v.p=false;
-		for(int i=0;i<vi.size();i++) {
-			if(vi.get(i).equals(v.p)) {
-				i++;
+		
 				v.p=false;
-			}
-		}
+		
 
 	}
 
 	@When("the client comming to the bank")
 	public void the_client_comming_to_the_bank() {
-		for(int i=0;i<vi.size();i++) {
-			if(!vi.get(i).equals(v.p)) {
+		
 			v.p=true;
-			}
-		}
+			the_visitor_has_done_his_visit_and_may_add_his_notes();
+		
 	}
 
 	@Then("the visitor has done his visit and may add his notes")
