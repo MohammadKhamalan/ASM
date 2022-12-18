@@ -9,9 +9,13 @@ import io.cucumber.java.en.When;
 public class delete_steps {
 	client cl=new client();
 	visits v=new visits();
+	bank b=new bank();
+	Admin aad=new Admin();
 	List<visits> vi=new ArrayList<>();
 	List<client> c=new ArrayList<>();
-
+	List <bank> bb=new ArrayList<>();
+	List <visits> vv=new ArrayList<>();
+	List <Admin> ad=new ArrayList<>();
 	@When("the client want to delete appointment visit bank")
 	public void the_client_want_to_delete_appointment_visit_bank() {
 		//for(int i=0;i<c.size();i++) {
