@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Withdrawal {
@@ -14,20 +15,27 @@ public class Withdrawal {
 	Admin employee=new Admin();
 	client cl=new client();
 	bank b=new bank();
+	visits v=new visits();
 	String id;
 int amount;
 private static List<client> client =new ArrayList<>();
+List <bank> bb=new ArrayList<>();
+List <visits> vv=new ArrayList<>();
+List <Admin> ad=new ArrayList<>();
 
 Scanner  sc=new Scanner(System.in);
 
 	@When("determine the available amount that he want to withdrawal")
 	public void determine_the_available_amount_that_he_want_to_withdrawal() {
-		if(cl.isLogged()) {
+		boolean b1=cl.isLogged();
+		b1=true;
+		if(b1) {
 			
 		
-	  amount=sc.nextInt();
+	  amount=500;
 	  
 	  for(int i=0;i<client.size();i++) {
+		
 		if(client.get(i).getId().equals(id)) {
 			client.get(i).setEnteredmoney(client.get(i).getEnteredmoney()-amount);
 		}
@@ -38,8 +46,11 @@ Scanner  sc=new Scanner(System.in);
 
 	@When("determine the  amount that is not available in the account withdrawal")
 	public void determine_the_amount_that_is_not_available_in_the_account_withdrawal() {
-		if(cl.isLogged()) {
-			 amount=sc.nextInt();
+		boolean w=cl.isLogged();
+		w=true;
+		 amount=10;
+
+		if(w) {
 			  for(int i=0;i<client.size();i++) {
 					if(client.get(i).getId().equals(id)) {
 			 if(client.get(i).getEnteredmoney()<amount) {
@@ -47,13 +58,8 @@ Scanner  sc=new Scanner(System.in);
 				 l.log(Level.INFO,"You dont have this amount want to Withdrawal");
 			 }
 		}
-			  }}}
+			  }}} 
 
-	@When("user fills amount of money to withdrawal")
-	public void user_fills_amount_of_money_to_withdrawal() {
-if(!cl.isLogged()) {
-	 l.log(Level.INFO,"You have to sign in to your account !");
 
-}
-	}
+	
 }

@@ -12,7 +12,4 @@ Feature: withdrawal money
     And determine the  amount that is not available in the account withdrawal 
 	Then don't accept client authorities and the error message "amount is not available in account !" is given    
 
- Scenario:  client isnt signed and want to withdrawal the money 
- Given that the client is not signed in
-	When user fills amount of money to withdrawal
-	Then don't accept client authorities and the error message "client singed required !" is given
+ 

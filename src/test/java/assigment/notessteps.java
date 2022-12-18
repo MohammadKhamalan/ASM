@@ -12,6 +12,11 @@ public class notessteps {
  visits v=new visits();
  List <visits> vi=new ArrayList<>();
 client cl=new client();
+Admin employee=new Admin();
+List <bank> bb=new ArrayList<>();
+List <client> cc=new ArrayList<>();
+List <Admin> ad=new ArrayList<>();
+bank b=new bank();
 boolean want;
  String note;
 	@Then("the client is not visited the bank")

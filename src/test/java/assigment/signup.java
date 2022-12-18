@@ -49,7 +49,9 @@ public class signup {
 	@Then("the client whith ID {string} , NAME {string} , Email {string} , address {string} ,post code {string} ,Entered money={int},city {string} is registered in the system")
 	public void the_client_whith_id_name_email_address_post_code_entered_money_city_is_registered_in_the_system(String id, String name, String email, String address, String ps,Integer en, String city) {
 		bank.addclient(employee,cl);
+		number.add(cl);
 		assertTrue(  bank.signdone(id));
+		
 	}
 	@Then("the error message {string} is given")
 	public void the_error_message_is_given(String string) {

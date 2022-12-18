@@ -14,9 +14,7 @@ public visits() {
 	p=false;
 	notes="";
 }
-public void settime(String time1) {
-	this.time=time1;
-}
+
 public String gettime() {
 	return time;
 	

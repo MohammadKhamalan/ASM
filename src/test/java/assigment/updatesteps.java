@@ -11,6 +11,9 @@ public class updatesteps {
 client cl=new client();
 List <visits> vi=new ArrayList<>();
 visits v=new visits();
+List <client> c=new ArrayList<>();
+List <bank> bb=new ArrayList<>();
+List <Admin> ad=new ArrayList<>();
 	@Given("the client already made resevartion")
 	public void the_client_already_made_resevartion() {
 	 

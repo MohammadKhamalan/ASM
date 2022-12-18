@@ -15,9 +15,16 @@ import assigment.Admin;
 public class deposit {
 	client cl=new client();
 	Admin clientt=new Admin();
+	
+	bank b=new bank();
+	visits v=new visits();
  	int money;
 	Scanner sc= new Scanner(System.in);
-    private static List<client> client =new ArrayList<>();
+      List <client> client =new ArrayList<>();
+   
+	List <bank> bb=new ArrayList<>();
+	List <visits> vv=new ArrayList<>();
+	List <Admin> ad=new ArrayList<>();
 String id;
 	Logger l=Logger.getLogger(signup.class.getName());
 	Admin s=new Admin();
@@ -30,8 +37,10 @@ String id;
 
 	@When("determine the amount to be deposited and and send")
 	public void determine_the_amount_to_be_deposited_and_and_send() {
-		if(cl.isLogged()) {
-			int money= sc.nextInt();
+		int money= 10;
+boolean b=cl.isLogged();
+b=true;
+		if(b) {
 			for(int i =0;i<client.size();i++) {
 				if(client.get(i).getId().equals(id)) {
 					client.get(i).setEnteredmoney(client.get(i).getEnteredmoney()+money);
