@@ -12,8 +12,8 @@ import io.cucumber.java.en.When;
 public class Withdrawal {
 	Logger l=Logger.getLogger(signup.class.getName());
 
-	Admin employee=new Admin();
-	client cl=new client();
+	Admin cl=new Admin();
+	client k=new client();
 	bank b=new bank();
 	visits v=new visits();
 	String id;
@@ -29,10 +29,11 @@ Scanner  sc=new Scanner(System.in);
 	public void determine_the_available_amount_that_he_want_to_withdrawal() {
 		boolean b1=cl.isLogged();
 		b1=true;
-		if(b1) {
+		  amount=500;
+
+		if(cl.isLogged()) {
 			
 		
-	  amount=500;
 	  
 	  for(int i=0;i<client.size();i++) {
 		
@@ -50,7 +51,7 @@ Scanner  sc=new Scanner(System.in);
 		w=true;
 		 amount=10;
 
-		if(w) {
+		if(cl.isLogged()) {
 			  for(int i=0;i<client.size();i++) {
 					if(client.get(i).getId().equals(id)) {
 			 if(client.get(i).getEnteredmoney()<amount) {

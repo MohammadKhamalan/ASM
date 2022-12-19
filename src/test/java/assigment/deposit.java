@@ -13,8 +13,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import assigment.Admin;
 public class deposit {
-	client cl=new client();
-	Admin clientt=new Admin();
+	client ll=new client();
+	Admin cl=new Admin();
 	
 	bank b=new bank();
 	visits v=new visits();
@@ -31,7 +31,7 @@ String id;
 
 	@Given("that the client is signed in his account")
 	public void that_the_client_is_signed_in_his_account() {
-		clientt.setLogged(true);
+		cl.setLogged(true);
 	   
 	}
 
@@ -40,7 +40,7 @@ String id;
 		int money= 10;
 boolean b=cl.isLogged();
 b=true;
-		if(b) {
+		if(cl.isLogged()) {
 			for(int i =0;i<client.size();i++) {
 				if(client.get(i).getId().equals(id)) {
 					client.get(i).setEnteredmoney(client.get(i).getEnteredmoney()+money);
@@ -63,7 +63,7 @@ b=true;
 
 	@Given("that the client is not signed in")
 	public void that_the_client_is_not_signed_in() {
-		clientt.setLogged(false);
+		cl.setLogged(false);
 
 	}
 
