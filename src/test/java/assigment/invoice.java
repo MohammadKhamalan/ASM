@@ -17,6 +17,9 @@ public class invoice {
 	deposit d=new deposit();
 	Withdrawal w=new Withdrawal();
 	List<client> c=new ArrayList<>();
+	List <bank> bb=new ArrayList<>();
+	List <visits> vv=new ArrayList<>();
+	List <Admin> ad=new ArrayList<>();
 	String g;
 	@Given("the client is signed in and the employee logged in")
 	public void the_client_is_signed_in_and_the_employee_logged_in() {
